@@ -1,13 +1,14 @@
+import Link from "next/link"
 export default function Post({ post }) {
   return (
-    <a>
+    <div>
       <span>{post.id}</span>
       {" : "}
-      <a href={`/posts/${post.id}`}>
+      <Link href={`/posts/${post.id}`} passHref>
         <span className="cursor-pointer text-blue-500 border-b border-blue-500 hover:bg-gray-200">
           {post.title}
         </span>
-      </a>
-    </a>
+      </Link>
+    </div>
   );
 }
